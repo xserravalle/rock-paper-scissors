@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Opponent Choice"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#193253"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/computerImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/questionmark"
+            android:scaleType="fitCenter"
+            android:contentDescription="Computer choice hidden" />
+
+        <TextView
+            android:id="@+id/computerChoiceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Choose Rock, Paper, or Scissors"
+            android:textSize="18sp"
+            android:textColor="#475569"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rockButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Rock"
+                android:textAllCaps="false"
+                android:textColor="#193253"
+                android:backgroundTint="#BFDBFE" />
+
+            <Button
+                android:id="@+id/paperButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Paper"
+                android:textAllCaps="false"
+                android:textColor="#193253"
+                android:backgroundTint="#BFDBFE" />
+
+            <Button
+                android:id="@+id/scissorsButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Scissors"
+                android:textAllCaps="false"
+                android:textColor="#193253"
+                android:backgroundTint="#BFDBFE" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/playerChoiceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Your choice: —"
+            android:textSize="20sp"
+            android:textColor="#193253"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:layout_marginTop="12dp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:accessibilityLiveRegion="polite" />
+
+        <TextView
+            android:id="@+id/recordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Wins: 0 | Losses: 0 | Draws: 0"
+            android:textSize="17sp"
+            android:textColor="#193253"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:minHeight="52dp"
+            android:text="Restart Round"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#245FA8" />
+
+        <Button
+            android:id="@+id/clearRecordButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:text="Clear Saved Record"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#245FA8" />
+
+        <Button
+            android:id="@+id/backMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="52dp"
+            android:text="Back to Menu"
+            android:textAllCaps="false"
+            android:textColor="#193253"
+            android:backgroundTint="#BFDBFE" />
+
+    </LinearLayout>
+
+</ScrollView>

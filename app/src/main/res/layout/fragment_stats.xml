@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Player Stats"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#193253"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/totalsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Wins: 0&#10;Losses: 0&#10;Draws: 0"
+        android:textSize="22sp"
+        android:textColor="#193253"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Round History"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#193253" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <ListView
+            android:id="@+id/historyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/emptyHistoryText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No saved rounds yet."
+            android:textSize="18sp"
+            android:textColor="#475569"
+            android:gravity="center" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/statsClearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:minHeight="52dp"
+        android:text="Clear Saved Record"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#245FA8" />
+
+    <Button
+        android:id="@+id/statsBackButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:text="Back to Menu"
+        android:textAllCaps="false"
+        android:textColor="#193253"
+        android:backgroundTint="#BFDBFE" />
+
+</LinearLayout>
