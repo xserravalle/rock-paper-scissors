@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Your choice: —"
+            android:text="Your choice:"
             android:textSize="20sp"
             android:textColor="#193253"
             android:gravity="center" />
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:minHeight="52dp"
-            android:text="Restart Round"
+            android:text="Play Again"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:backgroundTint="#245FA8" />

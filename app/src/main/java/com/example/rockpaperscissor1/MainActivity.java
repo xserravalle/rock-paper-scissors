@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     StatsFragment statsFragment;
     InstructionsFragment instructionsFragment;
 
+    private static int wins = 0;
+    private static int losses = 0;
+    private static int draws = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,5 +58,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void showInstructionsFragment() {
         getSupportFragmentManager().beginTransaction().replace(R.id.container, instructionsFragment).commit();
+    }
+
+    public static void updateStats(int wins, int losses, int draws) {
+        MainActivity.wins = wins;
+        MainActivity.losses = losses;
+        MainActivity.draws = draws;
+    }
+
+    public static void clearStats() {
+        MainActivity.wins = 0;
+        MainActivity.losses = 0;
+        MainActivity.draws = 0;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+
+    public int getLosses() {
+        return losses;
+    }
+
+    public int getDraws() {
+        return draws;
     }
 }

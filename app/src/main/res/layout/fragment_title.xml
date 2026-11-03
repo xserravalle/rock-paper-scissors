@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Rabia Hussain&#10;Jaden Franklin&#10;Peyton Holland"
+            android:text="Rabia Hussain\nJaden Franklin\nPeyton Holland"
             android:textSize="22sp"
             android:textColor="#193253"
             android:gravity="center" />
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="ITEC 4550&#10;Dr. Sunae Shin"
+            android:text="ITEC 4550\nDr. Sunae Shin"
             android:textSize="18sp"
             android:textColor="#475569"
             android:gravity="center" />
