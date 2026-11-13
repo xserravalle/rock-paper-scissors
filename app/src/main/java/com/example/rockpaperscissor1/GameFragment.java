@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,12 +34,28 @@ public class GameFragment extends Fragment {
     private int losses = 0;
     private int draws = 0;
 
+    private GameDatabaseHelper databaseHelper;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_game, container, false);
 
         mComputerChoice = new GameChoice();
+
+        databaseHelper = new GameDatabaseHelper(requireContext());
+
+        int[] savedStats = databaseHelper.getStats();
+
+        wins = savedStats[0];
+        losses = savedStats[1];
+        draws = savedStats[2];
+
+        Toast.makeText(
+                requireContext(),
+                "SQLite Database Connected Successfully!",
+                Toast.LENGTH_LONG
+        ).show();
 
         computerImage = (ImageView) rootView.findViewById(R.id.computerImage);
         computerChoiceText = (TextView) rootView.findViewById(R.id.computerChoiceText);
@@ -166,14 +183,22 @@ public class GameFragment extends Fragment {
             resultText.setText("YOU LOSE.");
         }
 
+
+        databaseHelper.saveStats(wins, losses, draws);
+
         updateRecordDisplay();
         MainActivity.updateStats(wins, losses, draws);
+
     }
+
 
     private void clearRecord() {
         wins = 0;
         losses = 0;
         draws = 0;
+
+        databaseHelper.clearStats();
+
         updateRecordDisplay();
 
         MainActivity activity = (MainActivity) getActivity();
@@ -182,7 +207,13 @@ public class GameFragment extends Fragment {
         }
     }
 
+
     private void updateRecordDisplay() {
-        recordText.setText("W: " + wins + " || L: " + losses + " || D: " + draws);
+        recordText.setText(
+                "SQLite Database Connected\n" +
+                        "Wins: " + wins +
+                        " | Losses: " + losses +
+                        " | Draws: " + draws
+        );
     }
 }

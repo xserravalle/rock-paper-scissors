@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Round History"
+        android:text="Stats History"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#193253" />
@@ -51,23 +51,35 @@
             android:id="@+id/emptyHistoryText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="No saved rounds yet."
+            android:text="No saved stats yet."
             android:textSize="18sp"
             android:textColor="#475569"
             android:gravity="center" />
 
     </FrameLayout>
 
+
     <Button
         android:id="@+id/statsClearButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="62dp"
         android:layout_marginTop="12dp"
+        android:backgroundTint="#245FA8"
         android:minHeight="52dp"
-        android:text="Clear Saved Record"
+        android:text="Save Stats to History"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#245FA8" />
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/clearHistoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#245FA8"
+        android:minHeight="52dp"
+        android:text="Clear History"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/statsBackButton"
@@ -78,5 +90,6 @@
         android:textAllCaps="false"
         android:textColor="#193253"
         android:backgroundTint="#BFDBFE" />
+
 
 </LinearLayout>
